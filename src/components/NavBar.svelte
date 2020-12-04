@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher, onMount } from "svelte";
-  import { slide } from "svelte/transition";
-  
+  import { slide, fade } from "svelte/transition";
+
   const dispatch = createEventDispatcher();
   let open = false;
   let width;
@@ -46,6 +46,7 @@
           aria-label="Menu"
           aria-expanded="true"
           on:keyup={(e) => e.key === 'Enter' && toggleOpen()}
+          transition:fade="{{duration: 100}}"
         >
           <line x1="2" y1="2" x2="28" y2="28" stroke="#333" stroke-width="5" />
           <line x1="28" y1="2" x2="2" y2="28" stroke="#333" stroke-width="5" />
@@ -75,6 +76,7 @@
           aria-label="Menu"
           aria-expanded="false"
           on:keyup={(e) => e.key === 'Enter' && toggleOpen()}
+          transition:fade="{{duration: 100}}"
         >
           <line x1="0" y1="5" x2="30" y2="5" stroke="#333" stroke-width="5" />
           <line x1="0" y1="15" x2="30" y2="15" stroke="#333" stroke-width="5" />
