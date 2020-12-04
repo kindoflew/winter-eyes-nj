@@ -1,6 +1,7 @@
 <script>
   import { fly } from 'svelte/transition';
   import { onMount } from "svelte";
+  
   //Snow animation lovingly stolen from the Svelte tutorial
   let characters = ["*", "."];
   let snow = new Array(100)
@@ -16,11 +17,14 @@
     .sort((a, b) => a.r - b.r);
   
   let ready = false;
+
   onMount(() => {
     ready = true;
     let frame;
+
     function loop() {
       frame = requestAnimationFrame(loop);
+
       snow = snow.map((flake) => {
         flake.y += 0.2 * flake.r;
         if (flake.y > 115) {
@@ -30,7 +34,9 @@
         return flake;
       });
     }
+
     loop();
+
     return () => cancelAnimationFrame(frame);
   });
  

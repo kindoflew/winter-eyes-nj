@@ -5,6 +5,7 @@
   import About from '../components/About.svelte';
   import Contact from '../components/Contact.svelte';
   import Footer from '../components/Footer.svelte';
+  
   let services;
   let about;
   let contact;
@@ -17,10 +18,12 @@
       behavior: 'smooth'
     });  
   }
+
   function getRemInPx(num) {
     let fontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');
     return parseFloat(fontSize) * num;
   }
+
   function sectionCoords() {
     sections = {
       'Services': getTop(services),
@@ -28,6 +31,7 @@
       'Contact': getTop(contact), 
     }
   }
+
   function getTop(node){
     return node.getBoundingClientRect().top + window.pageYOffset;
   }  

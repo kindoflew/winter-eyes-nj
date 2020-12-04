@@ -1,9 +1,11 @@
 <script>
   import { createEventDispatcher, onMount } from "svelte";
   import { slide } from "svelte/transition";
+  
   const dispatch = createEventDispatcher();
   let open = false;
   let width;
+
   //fixes FOUT
   let ready;
   onMount(() => {

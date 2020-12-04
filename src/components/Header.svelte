@@ -2,6 +2,7 @@
   import NavBar from "./NavBar.svelte";
   
   let scrollY;
+  
   function topScroll() {
     window.scrollTo({
       top: 0,
