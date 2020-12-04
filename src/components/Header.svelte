@@ -2,7 +2,7 @@
   import NavBar from "./NavBar.svelte";
   
   let scrollY;
-  
+
   function topScroll() {
     window.scrollTo({
       top: 0,
@@ -25,7 +25,6 @@
       on:keyup={(e) => e.key === 'Enter' && topScroll()}
     />
   </div>
-
   <NavBar on:sendScroll />
 </header>
 
