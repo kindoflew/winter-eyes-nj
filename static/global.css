@@ -1,0 +1,49 @@
+html, body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #bacaec;
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.3em;
+  }
+}
+
+body {
+  color: #333;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #000F5D;
+}
+
+.open {
+  overflow: hidden;
+}
