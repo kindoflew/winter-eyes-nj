@@ -1,7 +1,7 @@
 <script>
-  import { fly } from 'svelte/transition';
+  import { fade } from "svelte/transition";
   import { onMount } from "svelte";
-  
+
   //Snow animation lovingly stolen from the Svelte tutorial
   let characters = ["*", "."];
   let snow = new Array(100)
@@ -15,7 +15,7 @@
       };
     })
     .sort((a, b) => a.r - b.r);
-  
+
   let ready = false;
 
   onMount(() => {
@@ -39,27 +39,23 @@
 
     return () => cancelAnimationFrame(frame);
   });
- 
 </script>
 
 <section>
   {#each snow as s}
     <span
       style="left: {s.x}%; top: {s.y}%; transform: scale({s.r})"
-      aria-hidden="true"
-    >{s.character}</span>
+      aria-hidden="true">{s.character}</span
+    >
   {/each}
   {#if ready}
-  <div in:fly="{{delay: 250, duration: 3000, x: 0, y: 400, opacity: 0.1}}">
-    <h1>Winter Eyes</h1>
-    <p>Property Caretakers / Estate Managers</p>
-  </div>  
-  <p in:fly="{{delay: 3000, duration: 3000, x: 0, y: 400, opacity: 0.1}}">
-    "<em>Our eyes are your eyes.</em>"
-  </p>
+    <div in:fade={{ duration: 900 }}>
+      <h1>Winter Eyes</h1>
+      <p>Property Caretakers / Estate Managers</p>
+      <p>"<em>Our eyes are your eyes.</em>"</p>
+    </div>
   {/if}
 </section>
-
 
 <style>
   section {
@@ -69,7 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     position: relative;
     overflow: hidden;
   }
@@ -117,5 +113,5 @@
     span {
       font-size: 2.75em;
     }
-  }  
+  }
 </style>
