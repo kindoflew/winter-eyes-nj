@@ -66,7 +66,7 @@
       max-width: 24rem;
       font-size: 1.2rem;
       text-align: left;
-      margin: 0 1rem;
+      margin-left: 5rem;
     }
     .image-wrapper {
       margin-top: 0;
