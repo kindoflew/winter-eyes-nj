@@ -50,7 +50,7 @@
     background-color: white;
     width: 100%;
     margin: 0;
-    padding: 1rem 0;
+    padding: 3rem 0;
     position: relative;
     z-index: 1;
   }
@@ -71,6 +71,7 @@
   h2 {
     margin: 0 auto;
     max-width: 75%;
+    padding-bottom: 2rem;
   }
   
   h3 {

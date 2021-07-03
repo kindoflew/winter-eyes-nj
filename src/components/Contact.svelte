@@ -23,7 +23,7 @@
   .contact-wrapper {
     background-color: white;
     min-height: calc(100vh - 18rem);
-    padding: 1rem;
+    padding: 3rem 0;
   }
   .button-wrapper {
     display: flex;
